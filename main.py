@@ -1,2 +1,304 @@
-import lzma,base64
-exec(lzma.decompress(base64.b85decode('T>t<81poj4|NsC0{{SzLL!gT~(EkjUwUGE3j$BjQ6L970Gw8u1Udk_W#2~=j__Y<>_0{(2(aan290FNj&_95koee%_s)+xBW!6j8Ui5tNxWh3`aTIt_fh=;u=lUPtuG8vY8C2Z!48b-txEI7_jx5$*9?eAy2JR279Zz|lkny!bdu{U(`fL;m$dMiyh5t~z2No5_c8WmwxwE=xAXS_bf*^;WE2=`_6|*xrXx`)4DLEGJUuou-Y;&Z(nE!?W&fv7p4OdQ(Q2i;;MxGhy)v-X=H&sruoa{gb>wPovxa~FGT=p~cQkc2$M;OM{v(ps7rR1zSgHc0wkq@usxW!X)`Hd7$Kt}fkRvO5VB^z(D{CqnBl7q{@qF%2Qp!lEoe~BVl&2>e!C9v>&HzFIm{=@6DF1V&^#UErGxO@&1(}J*Z{@GVLc@-yZx*HULycR0ml7dTOM$sEa#=yyqAP<2hY~X;PKcw#ZCOqG31?`fKwqhi?$={I!N;w>;NI|jR#QN3)CwmtEi{8efBA|o9pPz>T7^x<zN4%{6Ngr+*NTlI*vq!(JZU-RLQ0U(&m&xu81i+R(iUPjK2^Zrfwiddp0ojaBmB)S2SxGyn+AZ~wB<1%PI0hnO3Q&`1mp+M+D?=$o8d&!^bfy*TffwO^XcRwKV>&^Afpf%ZHbxa2N=y9S;H&<t%ikag6=Vw`)Qarx`n7{#c3(c=rP)lUU;v1IX-#*-Pw+ae&Y#u&Qh(8g^4`$lCziC&#7z1<P)EWD6h)h<+{6(zX#)lC`)}<errq+Z9T-q3E#SJ&oUTD;qjH$e1mv*65V;*$?dB`3@$eET6?qSi9UD2R?B)w%!;~YIv=rdyoriPjGz^;<))3%46evg(%Wft^bjtX_K?KAdsRNk7T@v}}%Vs!;q9x^EK{v^KQb4C5Q5VjP=cN-o;jJV?4YD<<kciji;RXM#XGR)ZiQXSuDAzY=E<|<@r8V|aAC`$kpIi7tjhfkHuBke=(RWZ8s<{yeBI^)J-kwC@J(3Gc#m8wacTNE9;}CS=BNH*f0nh~km>I^Z;@2~xsq9yow6iD@*LISCf$#1(qw+P%m}d9A|K(oI7MaZ|*3R;~FosQls{0vmNyiVO-J9n$(tcnYYIyp3E2)r?=qrO=!uHFKZ7mTj4)emIS%dt%cLhMooXt&0Qg{k#*aJ?W9z`G;|CSq>N4vLm4HEP&hZJIB_CVA;(2yrfWKe`1jO}wCkCwy}59)lj^BbC%YSZtte|-m~d0=-;V=nPW0zVAU--pNHhCFG^_9@B(+5qWRrafDz4WmMEbZn`?)}i$g@Dp>A%Y1>=uV+q*7K~zX?Y#Yk0kq>c|5nv2Qbo3WsLYR1sEKhhn9<(6KsxPFpT)iOG4+twsiTy*{Xpvb6=AZtCAS|gl5<Yu;GVtS>qtz~znf~Y4GN4HuWfRMZw`51{V^I!kRXJiQ)O?a9fa)>0rNl>w_qt&1Z$9jmN8&yz0nm<vixwaThQb4oXY*XI07P_QTW+;_V;5jX+Ja~ALb&ZW~P#;r`(*aSn^F?!1B*MQr;lHGtfHT<r43_+79z0s@h;acP5NEanW3MV--|&HTQb*UkJEF7ia{jd93Yqw^LK#fon{zX0e1qJXedfkI$aBatsqzm`ypkTteu#34><UVTGc@Fwc=PW6~IAVBQt)`~>mZBlo=xYlt3vzu3^k8~={Es)`tMN6r{HI(p4~5>R+T<msijMt!W>`jke`N~|k95OgOA(B1#GXpH6(y>q&j^*<+ClaY558+NTXq}Zm`&xd_Ml`^(I7!0iG^}<&Dim1XH9zZ1ML^bFemWpO8yXADnl<k|JUrL-z>uSay$M4#{`6&^=I!|X!)|V7DL4-Go(r4|WF_WraxrEvf#zS^aFp0Ap;4sW6+i=-+Xd_9aLcj0sm^z+^s??NO^#hLnIF+|i%luJudW)DZjwC$6Q5xjP5;~F#(PZHilVKE()r{me&sqbx_luU-N2-dHe7R<*j<y5v##c5jSKr+5PPe1E#=H-@4SG#^FxcI+%mUO(weBpui0`(c(qgjOB3$LngD8-YXXeH(_ElVDM8JV81a~_?e}L{Ib;9efc811M=64IUhZKslF8Df!8*G!%q8VE62&TWQX%r!r+8C9P7O2(~FnWO}d!_Cbu)d)ECok2ayU7kqU6>(_hK9#OER0U#+)SSg6J}~f9EMIQQ-8!+wOT#W)rzQ*De3VnQrp2S+G^Zh?MCNpB@O^!(m#nhCHxRBAM6g4bZdJ2w}^TYpvay1JO_8C*)iqGx7?1oT&V_erln%3-dHP93;nvowq|sl(=5s%hJ;YQXZgjF@hEzB!-R63LSabtCohm*EM7ox+k}UW1MmIPrWSf+)DP_1_#^Ndb^@-L+^O<#bWjqKx$A2CPeoEPKRT1@Sql)VnLr~P_Wq?LVa@CJI)e_{OZy6bwSSh@ji7(lA^rOvy5HB!=lyplfPp!byi8h1Y^^(tSoCfoF*3aok5hQ-ycu7ej9dn&JMJFR6ji4p^T29UtIuudF3wSiztITXHlH%TXMDN~I}p>Xq2+jSC|R8MiuwhsLud(7O>FX%ZV@)_QLk(Xw{h>m;}k40&o+3(6#ZjQP|4k~@H4FwxK^o&-h8R7$}IOF5Z8a6SuZs#;tNIug9U$F?u<WmS*0jSI9tGYk5RC<;@~Zx0#o~)kA46=7EXrX|8**JPqz|JEY>Jt|3J9qJu39Uzc#bLrk>*M!hSrn1FQ+hhfmNv1%*tYV&K`Dqm3>;oztyOX^Wxyvf^i(hslE)128n1h7K*+r6X!A;^%O}*fD)jmwA(f;H3XYUhGlVfZMzU2?se(50Rnswa7$c0=LP%0z?`Dez3wTVb0jC!JuB%j)nRAaqU#pv3%9DFL1)|-=P?Glo=jVRp#ohL2f1SaEueLUN@<FCKmjh&@#v|igpXUzTg#ju+`K^=~q&a^xnbO0+66st(M2y1K_RsGUWtSXn~|^0`&|<U>MZ4BJO*XZ>Dw!c#O%t=l`N^lXykwK;-WYm7JN-rPNzzI>o}%MGHt}i<7?WP56j2#F(=_!?Q*cIRufBV2wOYFlse{A3+X(vK&csHOra_F$9bo?$>T?WUZWQpZl_NpE{9WDc{Yjz|i=-W#c>Bl6Lu|s$ZeO$tio~0M0W~8da@-Dc#+6-JhGhcp=(r2qB!bme_pa+Is*C@~mq~R%{GnwivVh8~dI<cFHcc2x{A}|25*2+?=o)`ocM||0xC!9iBw!>?vmcN^n`m)@~jh!TJmTt!<f!$3GdgM3|42>AHPl>`Gllto+oWWYmgSYKGvYm1`K>68Q_VbXeh<M?uA;z4^gf>?A1nzBp9Bm;f^1Mem)b2buN@L!9G;UB1cY9>(mCkDa`TlEBGc|8kvo<5S^hlr>@WC+jf>RMcYaNP>YrB@GbTpEmmY%p1ML))Mn+eQ<V~nKft-QaO6d{k>Rb*mhA5_{_>fTEx#5!KfUn_-=CxX@@%lAmf9o{HZVGiA&ca6BXPzq!37eVUJ!?nP&}S&&2kS?s_&jc!tq~x@5kpHF5<kCe9Wh0Q4CJ?AB35K)dxs_XKSOO+RH|X10Tknnd{-r~jKQQP&wM%>mb}jA1IvJl1Bb?7|zb0X7!I=n!Pf*8)O`&m?Fz5WZzh`~WVPyK>m4^2{_k8ze(^te~_qjeR@uzcMwM)Xo1VBE*sinwXS_lBwSlI6Lp~F<udZt<t6m-Ux2~1VGu&ebm<@V34z<@aWEot{Fgm$W9euN_cKPV#tQ@=C^==#2kI+G@DAeOJuOHWOE#XvHN|$ReUa-G%C{dAkjq0yIyjDdUMksbVD;NB{UAmYo}EwK$^egt~&rP-YVpd?+eh@qW5jIN%OXg6~*dqp@H%w48~3~fIz#;xt|0!Z}+&K=GMe=U81!_ujoI`y~evZq&%wXkAY_gqVDjhs`R62&4UJp{z>Sr`%sQEww~HYW75*CF@s7)(ewrrIkGaPrB_VLk{A*IZk+BANV~jEcN*-@>gobd-A|O9&E92fhHFHw^x)5+5^WO*oMP5@-100nC{V*x8V$F?H`4WYHUBiM3JDqyFNmQz#5uExj#c~7B)s;u{^KC)')))
+import json,os,random,sys,urllib.request as R
+E=os.environ.get('MAKEFUN_ENV_URL') or sys.exit(1)
+V=[0,100,320,330,500,900,0]
+M=10**5
+BUD=2*10**5
+B=[0]*128
+w=1;C=0;EP=-1;HM=0;S=0;H=0;K=[0,0];ZH=0
+U=[];N=[0]
+KL=[[0,0] for _ in range(128)]
+TH=[0]*(1<<18);TD=[0]*(1<<18);TF=[0]*(1<<18);TS=[0]*(1<<18);TM=[0]*(1<<18)
+CL={(4,6):(7,5),(4,2):(0,3),(116,118):(119,117),(116,114):(112,115)}
+CB={0:2,7:1,112:8,119:4}
+g=random.Random(1)
+Z=[[g.getrandbits(64) for _ in range(128)] for _ in range(12)]
+ZS=g.getrandbits(64);ZC=[g.getrandbits(64) for _ in range(16)];ZE=[g.getrandbits(64) for _ in range(8)]
+def T(t,r,f):
+ c=min(f,7-f)+min(r,7-r)
+ return[0,0,4,8,14,24,40,0][r]+([0,0,0,10,15,10,5,0][r] if f==3 or f==4 else 0)if t==1 else 6*c-20 if t==2 else 4*c-8 if t==3 else(15 if r==6 else 0)+(5 if r==0 and(f==3 or f==4)else 0)if t==4 else 2*c-6 if t==5 else[20,25,10,0,0,10,25,20][f] if r==0 else max(-50,-15*r)if t==6 else 8*c-24
+def W(x,s):
+ a=abs(x);r=s>>4 if x>0 else 7-(s>>4)
+ return(V[a]+T(a,r,s&7))*(1 if x>0 else-1)
+def ev():
+ p=min(H,7800);d=7800-p
+ a=K[0];b=K[1]
+ e=(T(7,a>>4,a&7)-T(6,a>>4,a&7)-T(7,7-(b>>4),b&7)+T(6,7-(b>>4),b&7))*d//7800
+ s=S+e
+ return s if w else-s
+def A(s,y):
+ for o in(-15,-17)if y else(15,17):
+  t=s+o
+  if not t&0x88 and B[t]==(1 if y else-1):return 1
+ for o,v in((-33,2),(-31,2),(-18,2),(-14,2),(14,2),(18,2),(31,2),(33,2),(-17,6),(-16,6),(-15,6),(-1,6),(1,6),(15,6),(16,6),(17,6)):
+  t=s+o
+  if not t&0x88 and B[t]==(v if y else-v):return 1
+ for d in(-17,-15,15,17):
+  t=s+d
+  while not t&0x88:
+   q=B[t]
+   if q:
+    if q in((3,5) if y else(-3,-5)):return 1
+    break
+   t+=d
+ for d in(-16,-1,1,16):
+  t=s+d
+  while not t&0x88:
+   q=B[t]
+   if q:
+    if q in((4,5) if y else(-4,-5)):return 1
+    break
+   t+=d
+ return 0
+def G(q):
+ L=[]
+ for s in range(128):
+  if s&0x88:continue
+  p=B[s]
+  if not p or(p>0)!=w:continue
+  a=abs(p);f=s&7;r=s>>4
+  if a==1:
+   d=16 if p>0 else-16
+   t=s+d
+   if not t&0x88 and not B[t]:
+    if r==(6 if p>0 else 1):
+     for pr in(5,4,3,2):L.append(s|(t<<7)|(pr<<14))
+    elif not q:
+     L.append(s|(t<<7))
+     if r==(1 if p>0 else 6):
+      t2=s+2*d
+      if not B[t2]:L.append(s|(t2<<7))
+   for t in(s+d-1,s+d+1):
+    if t&0x88:continue
+    c=B[t]
+    if(c and abs(c)!=6 and(c>0)!=w)or t==EP:
+     if r==(6 if p>0 else 1):
+      for pr in(5,4,3,2):L.append(s|(t<<7)|(pr<<14))
+     else:L.append(s|(t<<7))
+  elif a==2 or a==6:
+   for o in(-33,-31,-18,-14,14,18,31,33) if a==2 else(-17,-16,-15,-1,1,15,16,17):
+    t=s+o
+    if t&0x88:continue
+    c=B[t]
+    if not c:
+     if not q:L.append(s|(t<<7))
+    elif abs(c)!=6 and(c>0)!=w:L.append(s|(t<<7))
+  else:
+   for d in((-17,-15,15,17) if a==3 else(-16,-1,1,16) if a==4 else(-17,-16,-15,-1,1,15,16,17)):
+    t=s+d
+    while not t&0x88:
+     c=B[t]
+     if not c:
+      if not q:L.append(s|(t<<7))
+     else:
+      if abs(c)!=6 and(c>0)!=w:L.append(s|(t<<7))
+      break
+     t+=d
+ if not q:
+  if w:
+   if B[4]==6 and C&1 and not B[5] and not B[6] and B[7]==4 and not A(4,0) and not A(5,0) and not A(6,0):L.append(4|(6<<7))
+   if B[4]==6 and C&2 and not B[3] and not B[2] and not B[1] and B[0]==4 and not A(4,0) and not A(3,0) and not A(2,0):L.append(4|(2<<7))
+  else:
+   if B[116]==-6 and C&4 and not B[117] and not B[118] and B[119]==-4 and not A(116,1) and not A(117,1) and not A(118,1):L.append(116|(118<<7))
+   if B[116]==-6 and C&8 and not B[115] and not B[114] and not B[113] and B[112]==-4 and not A(116,1) and not A(115,1) and not A(114,1):L.append(116|(114<<7))
+ return L
+def pi(x):return abs(x)-1+(0 if x>0 else 6)
+def mk(m):
+ global w,C,EP,HM,S,H,ZH
+ f=m&127;t=(m>>7)&127;pr=(m>>14)&7
+ p=B[f];a=abs(p);cs=t;c=B[t]
+ if a==1 and t==EP and not c:
+  cs=t-16 if p>0 else t+16;c=B[cs]
+ np=pr*(1 if p>0 else-1) if pr else p
+ U.append((m,c,cs,C,EP,HM,S,H,ZH))
+ ZH^=Z[pi(p)][f]
+ if pr:ZH^=Z[pi(np)][t]
+ else:ZH^=Z[pi(p)][t]
+ if c:ZH^=Z[pi(c)][cs]
+ S-=W(p,f);S+=W(np,t)
+ if c:S-=W(c,cs)
+ if a!=1 and pr:H+=V[pr]-100
+ if c and abs(c)!=1:H-=V[abs(c)]
+ if a==6:K[0 if p>0 else 1]=t
+ HM=0 if a==1 or c else HM+1
+ nC=C
+ if a==6:nC&=~(3 if p>0 else 12)
+ if a==4:nC&=~CB.get(f,0)
+ if c and abs(c)==4:nC&=~CB.get(cs,0)
+ if nC!=C:ZH^=ZC[C]^ZC[nC];C=nC
+ nE=(f+t)//2 if a==1 and abs(t-f)==32 else-1
+ if EP!=-1:ZH^=ZE[EP&7]
+ if nE!=-1:ZH^=ZE[nE&7]
+ EP=nE
+ if a==6 and abs(t-f)==2:
+  rf,rt=CL[(f,t)]
+  rk=B[rf];B[rt]=rk;B[rf]=0
+  S-=W(rk,rf);S+=W(rk,rt);ZH^=Z[pi(rk)][rf]^Z[pi(rk)][rt]
+ B[f]=0;B[t]=np
+ if cs!=t:B[cs]=0
+ ZH^=ZS;w=not w
+def um():
+ global w,C,EP,HM,S,H,ZH
+ m,c,cs,oc,oep,ohm,os,oh,ozh=U.pop()
+ f=m&127;t=(m>>7)&127;pr=(m>>14)&7
+ p=B[t]
+ if pr:B[f]=1 if p>0 else-1
+ else:B[f]=p
+ B[t]=0
+ if c:B[cs]=c
+ if abs(p)==6:
+  K[0 if p>0 else 1]=f
+  if abs(t-f)==2:
+   rf,rt=CL[(f,t)]
+   B[rf]=B[rt];B[rt]=0
+ C,EP,HM,S,H,ZH=oc,oep,ohm,os,oh,ozh
+ w=not w
+def O(ms,tm,pl):
+ def k(m):
+  if m==tm:return-99999
+  c=B[(m>>7)&127]
+  if c:return-1000-V[abs(c)]*16+V[abs(B[m&127])]
+  if(m>>14)&7:return-900-V[(m>>14)&7]
+  if m==KL[pl][0]:return-800
+  if m==KL[pl][1]:return-700
+  return 0
+ return sorted(ms,key=lambda m:(k(m),m))
+class X(Exception):pass
+def F(d,a,b,pl):
+ global w,EP,ZH
+ N[0]+=1
+ if N[0]>BUD:raise X
+ if HM>=100:return 0
+ i=ZH&262143
+ if TH[i]==ZH and TD[i]>=d:
+  s=TS[i]
+  if s>M-128:s-=pl
+  elif s<-M+128:s+=pl
+  fl=TF[i]
+  if fl==1:return s
+  if fl==2 and s>=b:return s
+  if fl==3 and s<=a:return s
+  tm=TM[i]
+ else:tm=0
+ ck=A(K[0] if w else K[1],not w)
+ if d<=0:return Q(a,b,pl)
+ if d>=3 and not ck and H>900:
+  oE=EP;oZ=ZH
+  if EP!=-1:ZH^=ZE[EP&7]
+  EP=-1;ZH^=ZS;w=not w
+  s=-F(d-3,-b,-b+1,pl+1)
+  w=not w;EP=oE;ZH=oZ
+  if s>=b:return b
+ a0=a
+ ms=O(G(0),tm,pl)
+ bs=-M;bm=0;lg=0
+ for m in ms:
+  mw=w;c=B[(m>>7)&127];pr=(m>>14)&7;mk(m)
+  if A(K[0] if mw else K[1],not mw):um();continue
+  lg+=1
+  r=1 if lg>3 and d>=3 and not ck and not c and not pr else 0
+  s=-F(d-1-r,-b,-a,pl+1)
+  if r and s>a:s=-F(d-1,-b,-a,pl+1)
+  um()
+  if s>bs:bs=s;bm=m
+  if s>a:a=s
+  if a>=b:
+   if not B[(m>>7)&127] and not(m>>14)&7:
+    KL[pl][1]=KL[pl][0];KL[pl][0]=m
+   break
+ if lg==0:return-M+pl if ck else 0
+ TH[i]=ZH;TD[i]=d;TM[i]=bm
+ TS[i]=bs+pl if bs>M-128 else bs-pl if bs<-M+128 else bs
+ TF[i]=3 if bs<=a0 else 2 if bs>=b else 1
+ return bs
+def Q(a,b,pl):
+ N[0]+=1
+ if N[0]>BUD:raise X
+ if HM>=100:return 0
+ st=ev()
+ if st>=b:return b
+ if st>a:a=st
+ ck=A(K[0] if w else K[1],not w)
+ ms=O(G(0) if ck else G(1),0,pl)
+ lg=0
+ for m in ms:
+  c=B[(m>>7)&127]
+  if not ck and c and st+V[abs(c)]+200<a:continue
+  mw=w;mk(m)
+  if A(K[0] if mw else K[1],not mw):um();continue
+  lg+=1
+  s=-Q(-b,-a,pl+1)
+  um()
+  if s>a:a=s
+  if a>=b:break
+ if ck and lg==0:return-M+pl
+ return a
+def RT():
+ N[0]=0
+ ms=O(G(0),0,0)
+ bm=ms[0];d=1
+ while d<64:
+  try:
+   v=-M;b2=bm;a=-M
+   for m in ms:
+    mw=w;mk(m)
+    if A(K[0] if mw else K[1],not mw):um();continue
+    s=-F(d-1,-M,-a,1)
+    um()
+    if s>v:v=s;b2=m
+    if s>a:a=s
+   bm=b2
+   ms.remove(bm);ms.insert(0,bm)
+  except X:break
+  d+=1
+ return bm
+def P(p,b):
+ q=R.Request(E+p,data=json.dumps(b).encode())
+ try:
+  with R.urlopen(q)as r:return json.load(r)
+ except Exception:return{}
+def uc(m):
+ f=m&127;t=(m>>7)&127;pr=(m>>14)&7
+ return'abcdefgh'[f&7]+str((f>>4)+1)+'abcdefgh'[t&7]+str((t>>4)+1)+('' if not pr else'nbrq'[pr-2])
+def mu(u):
+ return(ord(u[0])-97)+(int(u[1])-1)*16|(((ord(u[2])-97)+(int(u[3])-1)*16)<<7)|(({'q':5,'r':4,'b':3,'n':2}.get(u[4:5],0))<<14)
+def setup(fen):
+ global B,w,C,EP,HM,S,H,K,ZH,U
+ B=[0]*128;U=[];S=0;H=0;ZH=0
+ z=fen.split()
+ for r,row in enumerate(z[0].split('/')):
+  s=(7-r)*16;f=0
+  for ch in row:
+   if ch.isdigit():f+=int(ch)
+   else:
+    i='PNBRQKpnbrqk'.index(ch);x=i+1 if i<6 else 5-i;B[s+f]=x
+    S+=W(x,s+f)
+    if abs(x)!=1:H+=V[abs(x)]
+    if abs(x)==6:K[0 if x>0 else 1]=s+f
+    ZH^=Z[pi(x)][s+f]
+    f+=1
+ w=z[1]=='w'
+ C=0
+ if z[2]!='-':
+  for ch in z[2]:C|={'K':1,'Q':2,'k':4,'q':8}[ch]
+ ZH^=ZC[C]
+ if z[3]!='-':
+  EP=(ord(z[3][0])-97)+(int(z[3][1])-1)*16
+  ZH^=ZE[EP&7]
+ else:EP=-1
+ HM=int(z[4]) if len(z)>4 else 0
+ if not w:ZH^=ZS
+def choose(g):
+ setup(g['start_fen'])
+ for u in g['moves']:mk(mu(u))
+ try:m=RT()
+ except Exception:m=None
+ if m is not None and uc(m) in g['legal_moves']:return uc(m)
+ return max(g['legal_moves'],key=lambda u:V[abs(B[(ord(u[2])-97)+(int(u[3])-1)*16])]+(V[{'q':5,'r':4,'b':3,'n':2}[u[4]]]-100 if len(u)==5 else 0))
+if __name__=='__main__':
+ while True:
+  g=P('/game',{})
+  if g.get('status')=='done':break
+  while g.get('status')=='your_move':
+   mv=choose(g)
+   g=P('/move',{'game':g['game'],'move':mv})
+   if not g:break
