@@ -2,7 +2,7 @@ import json,os,random,sys,urllib.request as R
 E=os.environ.get('MAKEFUN_ENV_URL') or sys.exit('no env')
 V=[0,100,320,330,500,900,0]
 M=100000
-BUD=60000
+BUD=100000
 B=[0]*128
 w=1;C=0;EP=-1;HM=0;S=0;H=0;K=[0,0];BP=[0,0];ZH=0
 U=[];N=[0];RP={}
