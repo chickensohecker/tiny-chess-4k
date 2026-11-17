@@ -190,7 +190,7 @@ def O(ms,tm,pl):
  z.sort()
  return[m for _,m in z]
 class X(Exception):pass
-def S(d,a,b,pl):
+def F(d,a,b,pl):
  N[0]+=1
  if N[0]>BUD:raise X
  if HM>=100 or RP.get(ZH,0)>1:return 0
@@ -214,7 +214,7 @@ def S(d,a,b,pl):
   mw=w;mk(m)
   if A(K[0] if mw else K[1],not mw):um();continue
   lg+=1
-  s=-S(d-1,-b,-a,pl+1)
+  s=-F(d-1,-b,-a,pl+1)
   um()
   if s>bs:bs=s;bm=m
   if s>a:a=s
@@ -257,7 +257,7 @@ def RT():
    for m in ms:
     mw=w;mk(m)
     if A(K[0] if mw else K[1],not mw):um();continue
-    s=-S(d-1,-M,-a,1)
+    s=-F(d-1,-M,-a,1)
     um()
     if s>v:v=s;b2=m
     if s>a:a=s
