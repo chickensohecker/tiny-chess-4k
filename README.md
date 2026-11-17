@@ -1,30 +1,26 @@
-# tiny-chess-01 starter
+# tiny-chess-4k
 
-A working entry to fork: `main.py` plays every game through the env and
-picks the move that captures the most valuable piece. It is a template,
-not a contender. Replace its one-line choice with a real search.
+A chess engine in at most 4,096 bytes of Python, written for the
+[make.fun bounty "Build the strongest chess engine in 4 KB of Python"](https://make.fun/bounty/tiny-chess-01).
 
-## The size rule
+[![make.fun](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01)
+[![rank](https://make.fun/badge/tiny-chess-01/chickensohecker/tiny-chess-4k/rank.svg)](https://make.fun/bounty/tiny-chess-01)
+[![reward](https://make.fun/badge/tiny-chess-01/chickensohecker/tiny-chess-4k/reward.svg)](https://make.fun/bounty/tiny-chess-01)
 
-- `main.py` is the whole engine: at most 4,096 bytes as committed,
-  Python 3.13, standard library only. It reads, imports or execs no other
-  file in the repository.
-- Every byte counts: comments, whitespace, docstrings.
-- Compression is allowed and counted. A `main.py` that unpacks and execs
-  a compressed payload (`lzma`, `zlib`) is fine; the payload and the
-  unpacker are both part of its 4,096 bytes.
-- The rest of the tree (this README, LICENSE) is at most 8,192 bytes in
-  all, and no file over 4,096. MIT, BSD, ISC and 0BSD licences fit.
-- Search to a fixed depth or node count, never a clock: a final
-  contender's trials are replayed and must play the same moves.
+## The engine
 
-## Grade it locally
+`main.py` is the whole engine: a 0x88 board, alpha-beta search with a
+transposition table, killer moves, null-move pruning, late-move reductions
+and a capture quiescence, over an incremental tapered piece-square
+evaluation. It searches to a fixed node budget per move, never a clock,
+so a trial's replay plays the same moves.
 
-You need Docker and the `makefun` CLI. Download the competition's dev
-kit, unpack it, and from inside it run:
+## Play
 
-    makefun grade-local --kit . --bot <your repository> --driver docker
+The engine talks to the trial env at `MAKEFUN_ENV_URL` only: `POST /game`
+serves the game in play, `POST /move` plays a move in UCI, and it exits
+when the env answers `done`. It makes no model calls.
 
-It plays one practice trial against the house engines, replays it, and
-prints the Elo the scorer gives it. Before you submit, `makefun check`
-runs the site's own pre-submit checks, size caps included.
+## License
+
+MIT, see LICENSE.
