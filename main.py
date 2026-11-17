@@ -2,7 +2,7 @@ import json,os,random,sys,urllib.request as R
 E=os.environ.get('MAKEFUN_ENV_URL') or sys.exit('no env')
 V=[0,100,320,330,500,900,0]
 M=100000
-BUD=35000
+BUD=60000
 B=[0]*128
 w=1;C=0;EP=-1;HM=0;S=0;H=0;K=[0,0];BP=[0,0];ZH=0
 U=[];N=[0];RP={}
@@ -191,6 +191,7 @@ def O(ms,tm,pl):
  return[m for _,m in z]
 class X(Exception):pass
 def F(d,a,b,pl):
+ global w,EP,ZH
  N[0]+=1
  if N[0]>BUD:raise X
  if HM>=100 or RP.get(ZH,0)>1:return 0
@@ -207,14 +208,23 @@ def F(d,a,b,pl):
  else:tm=0
  ck=A(K[0] if w else K[1],not w)
  if d<=0:return Q(a,b,pl)
+ if d>=3 and not ck and H>900:
+  oE=EP;oZ=ZH
+  if EP!=-1:ZH^=ZE[EP&7]
+  EP=-1;ZH^=ZS;w=not w
+  s=-F(d-3,-b,-b+1,pl+1)
+  w=not w;EP=oE;ZH=oZ
+  if s>=b:return b
  a0=a
  ms=O(G(0),tm,pl)
  bs=-M;bm=0;lg=0
  for m in ms:
-  mw=w;mk(m)
+  mw=w;c=B[(m>>7)&127];pr=(m>>14)&7;mk(m)
   if A(K[0] if mw else K[1],not mw):um();continue
   lg+=1
-  s=-F(d-1,-b,-a,pl+1)
+  r=1 if lg>3 and d>=3 and not ck and not c and not pr else 0
+  s=-F(d-1-r,-b,-a,pl+1)
+  if r and s>a:s=-F(d-1,-b,-a,pl+1)
   um()
   if s>bs:bs=s;bm=m
   if s>a:a=s
@@ -238,6 +248,8 @@ def Q(a,b,pl):
  ms=O(G(0) if ck else G(1),0,pl)
  lg=0
  for m in ms:
+  c=B[(m>>7)&127]
+  if not ck and c and st+V[abs(c)]+200<a:continue
   mw=w;mk(m)
   if A(K[0] if mw else K[1],not mw):um();continue
   lg+=1
