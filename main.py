@@ -1,16 +1,16 @@
 import json,os,random,sys,urllib.request as R
-E=os.environ.get('MAKEFUN_ENV_URL') or sys.exit('no env')
+E=os.environ.get('MAKEFUN_ENV_URL') or sys.exit(1)
 V=[0,100,320,330,500,900,0]
-M=100000
-BUD=100000
+M=10**5
+BUD=10**5
 B=[0]*128
-w=1;C=0;EP=-1;HM=0;S=0;H=0;K=[0,0];BP=[0,0];ZH=0
-U=[];N=[0];RP={}
+w=1;C=0;EP=-1;HM=0;S=0;H=0;K=[0,0];ZH=0
+U=[];N=[0]
 KL=[[0,0] for _ in range(128)]
 TH=[0]*(1<<17);TD=[0]*(1<<17);TF=[0]*(1<<17);TS=[0]*(1<<17);TM=[0]*(1<<17)
 CL={(4,6):(7,5),(4,2):(0,3),(116,118):(119,117),(116,114):(112,115)}
 CB={0:2,7:1,112:8,119:4}
-g=random.Random(12345)
+g=random.Random(1)
 Z=[[g.getrandbits(64) for _ in range(128)] for _ in range(12)]
 ZS=g.getrandbits(64);ZC=[g.getrandbits(64) for _ in range(16)];ZE=[g.getrandbits(64) for _ in range(8)]
 def T(t,r,f):
@@ -23,7 +23,7 @@ def ev():
  p=min(H,7800);d=7800-p
  a=K[0];b=K[1]
  e=(T(7,a>>4,a&7)-T(6,a>>4,a&7)-T(7,7-(b>>4),b&7)+T(6,7-(b>>4),b&7))*d//7800
- s=S+e+30*((BP[0]>1)-(BP[1]>1))
+ s=S+e
  return s if w else-s
 def A(s,y):
  for o in(-15,-17)if y else(15,17):
@@ -109,7 +109,7 @@ def mk(m):
  if a==1 and t==EP and not c:
   cs=t-16 if p>0 else t+16;c=B[cs]
  np=pr*(1 if p>0 else-1) if pr else p
- U.append((m,c,cs,C,EP,HM,S,H,BP[0],BP[1],ZH))
+ U.append((m,c,cs,C,EP,HM,S,H,ZH))
  ZH^=Z[pi(p)][f]
  if pr:ZH^=Z[pi(np)][t]
  else:ZH^=Z[pi(p)][t]
@@ -118,8 +118,6 @@ def mk(m):
  if c:S-=W(c,cs)
  if a!=1 and pr:H+=V[pr]-100
  if c and abs(c)!=1:H-=V[abs(c)]
- if c and abs(c)==3:BP[0 if c>0 else 1]-=1
- if pr==3:BP[0 if p>0 else 1]+=1
  if a==6:K[0 if p>0 else 1]=t
  HM=0 if a==1 or c else HM+1
  nC=C
@@ -138,13 +136,11 @@ def mk(m):
  B[f]=0;B[t]=np
  if cs!=t:B[cs]=0
  ZH^=ZS;w=not w
- RP[ZH]=RP.get(ZH,0)+1
 def um():
  global w,C,EP,HM,S,H,ZH
- m,c,cs,oc,oep,ohm,os,oh,ob0,ob1,ozh=U.pop()
+ m,c,cs,oc,oep,ohm,os,oh,ozh=U.pop()
  f=m&127;t=(m>>7)&127;pr=(m>>14)&7
  p=B[t]
- RP[ZH]-=1
  if pr:B[f]=1 if p>0 else-1
  else:B[f]=p
  B[t]=0
@@ -155,7 +151,6 @@ def um():
    rf,rt=CL[(f,t)]
    B[rf]=B[rt];B[rt]=0
  C,EP,HM,S,H,ZH=oc,oep,ohm,os,oh,ozh
- BP[0],BP[1]=ob0,ob1
  w=not w
 def O(ms,tm,pl):
  def k(m):
@@ -172,7 +167,7 @@ def F(d,a,b,pl):
  global w,EP,ZH
  N[0]+=1
  if N[0]>BUD:raise X
- if HM>=100 or RP.get(ZH,0)>1:return 0
+ if HM>=100:return 0
  i=ZH&131071
  if TH[i]==ZH and TD[i]>=d:
   s=TS[i]
@@ -218,7 +213,7 @@ def F(d,a,b,pl):
 def Q(a,b,pl):
  N[0]+=1
  if N[0]>BUD:raise X
- if HM>=100 or RP.get(ZH,0)>1:return 0
+ if HM>=100:return 0
  st=ev()
  if st>=b:return b
  if st>a:a=st
@@ -257,7 +252,7 @@ def RT():
   d+=1
  return bm
 def P(p,b):
- q=R.Request(E+p,data=json.dumps(b).encode(),headers={'content-type':'application/json'})
+ q=R.Request(E+p,data=json.dumps(b).encode())
  try:
   with R.urlopen(q)as r:return json.load(r)
  except Exception:return{}
@@ -267,8 +262,8 @@ def uc(m):
 def mu(u):
  return(ord(u[0])-97)+(int(u[1])-1)*16|(((ord(u[2])-97)+(int(u[3])-1)*16)<<7)|(({'q':5,'r':4,'b':3,'n':2}.get(u[4:5],0))<<14)
 def setup(fen):
- global B,w,C,EP,HM,S,H,K,BP,ZH,U,RP
- B=[0]*128;U=[];RP={};S=0;H=0;BP=[0,0];ZH=0
+ global B,w,C,EP,HM,S,H,K,ZH,U
+ B=[0]*128;U=[];S=0;H=0;ZH=0
  z=fen.split()
  for r,row in enumerate(z[0].split('/')):
   s=(7-r)*16;f=0
@@ -278,7 +273,6 @@ def setup(fen):
     i='PNBRQKpnbrqk'.index(ch);x=i+1 if i<6 else 5-i;B[s+f]=x
     S+=W(x,s+f)
     if abs(x)!=1:H+=V[abs(x)]
-    if abs(x)==3:BP[0 if x>0 else 1]+=1
     if abs(x)==6:K[0 if x>0 else 1]=s+f
     ZH^=Z[pi(x)][s+f]
     f+=1
@@ -293,7 +287,6 @@ def setup(fen):
  else:EP=-1
  HM=int(z[4]) if len(z)>4 else 0
  if not w:ZH^=ZS
- RP[ZH]=1
 def choose(g):
  setup(g['start_fen'])
  for u in g['moves']:mk(mu(u))
