@@ -8,18 +8,14 @@ w=1;C=0;EP=-1;HM=0;S=0;H=0;K=[0,0];BP=[0,0];ZH=0
 U=[];N=[0];RP={}
 KL=[[0,0] for _ in range(128)]
 TH=[0]*(1<<17);TD=[0]*(1<<17);TF=[0]*(1<<17);TS=[0]*(1<<17);TM=[0]*(1<<17)
+CL={(4,6):(7,5),(4,2):(0,3),(116,118):(119,117),(116,114):(112,115)}
+CB={0:2,7:1,112:8,119:4}
 g=random.Random(12345)
 Z=[[g.getrandbits(64) for _ in range(128)] for _ in range(12)]
 ZS=g.getrandbits(64);ZC=[g.getrandbits(64) for _ in range(16)];ZE=[g.getrandbits(64) for _ in range(8)]
 def T(t,r,f):
  c=min(f,7-f)+min(r,7-r)
- if t==1:return[0,0,4,8,14,24,40,0][r]+([0,0,0,10,15,10,5,0][r] if f==3 or f==4 else 0)
- if t==2:return 6*c-20
- if t==3:return 4*c-8
- if t==4:return(15 if r==6 else 0)+(5 if r==0 and(f==3 or f==4)else 0)
- if t==5:return 2*c-6
- if t==6:return[20,25,10,0,0,10,25,20][f] if r==0 else max(-50,-15*r)
- return 8*c-24
+ return[0,0,4,8,14,24,40,0][r]+([0,0,0,10,15,10,5,0][r] if f==3 or f==4 else 0)if t==1 else 6*c-20 if t==2 else 4*c-8 if t==3 else(15 if r==6 else 0)+(5 if r==0 and(f==3 or f==4)else 0)if t==4 else 2*c-6 if t==5 else[20,25,10,0,0,10,25,20][f] if r==0 else max(-50,-15*r)if t==6 else 8*c-24
 def W(x,s):
  a=abs(x);r=s>>4 if x>0 else 7-(s>>4)
  return(V[a]+T(a,r,s&7))*(1 if x>0 else-1)
@@ -27,21 +23,15 @@ def ev():
  p=min(H,7800);d=7800-p
  a=K[0];b=K[1]
  e=(T(7,a>>4,a&7)-T(6,a>>4,a&7)-T(7,7-(b>>4),b&7)+T(6,7-(b>>4),b&7))*d//7800
- s=S+e+(30 if BP[0]>1 else 0)-(30 if BP[1]>1 else 0)
+ s=S+e+30*((BP[0]>1)-(BP[1]>1))
  return s if w else-s
 def A(s,y):
- if y:
-  if not(s-15)&0x88 and B[s-15]==1:return 1
-  if not(s-17)&0x88 and B[s-17]==1:return 1
- else:
-  if not(s+15)&0x88 and B[s+15]==-1:return 1
-  if not(s+17)&0x88 and B[s+17]==-1:return 1
- for o in(-33,-31,-18,-14,14,18,31,33):
+ for o in(-15,-17)if y else(15,17):
   t=s+o
-  if not t&0x88 and B[t]==(2 if y else-2):return 1
- for o in(-17,-16,-15,-1,1,15,16,17):
+  if not t&0x88 and B[t]==(1 if y else-1):return 1
+ for o,v in((-33,2),(-31,2),(-18,2),(-14,2),(14,2),(18,2),(31,2),(33,2),(-17,6),(-16,6),(-15,6),(-1,6),(1,6),(15,6),(16,6),(17,6)):
   t=s+o
-  if not t&0x88 and B[t]==(6 if y else-6):return 1
+  if not t&0x88 and B[t]==(v if y else-v):return 1
  for d in(-17,-15,15,17):
   t=s+d
   while not t&0x88:
@@ -134,23 +124,15 @@ def mk(m):
  HM=0 if a==1 or c else HM+1
  nC=C
  if a==6:nC&=~(3 if p>0 else 12)
- if a==4:
-  if f==0:nC&=~2
-  elif f==7:nC&=~1
-  elif f==112:nC&=~8
-  elif f==119:nC&=~4
- if c and abs(c)==4:
-  if cs==0:nC&=~2
-  elif cs==7:nC&=~1
-  elif cs==112:nC&=~8
-  elif cs==119:nC&=~4
+ if a==4:nC&=~CB.get(f,0)
+ if c and abs(c)==4:nC&=~CB.get(cs,0)
  if nC!=C:ZH^=ZC[C]^ZC[nC];C=nC
  nE=(f+t)//2 if a==1 and abs(t-f)==32 else-1
  if EP!=-1:ZH^=ZE[EP&7]
  if nE!=-1:ZH^=ZE[nE&7]
  EP=nE
  if a==6 and abs(t-f)==2:
-  rf,rt={(4,6):(7,5),(4,2):(0,3),(116,118):(119,117),(116,114):(112,115)}[(f,t)]
+  rf,rt=CL[(f,t)]
   rk=B[rf];B[rt]=rk;B[rf]=0
   S-=W(rk,rf);S+=W(rk,rt);ZH^=Z[pi(rk)][rf]^Z[pi(rk)][rt]
  B[f]=0;B[t]=np
@@ -170,25 +152,21 @@ def um():
  if abs(p)==6:
   K[0 if p>0 else 1]=f
   if abs(t-f)==2:
-   rf,rt={(4,6):(7,5),(4,2):(0,3),(116,118):(119,117),(116,114):(112,115)}[(f,t)]
+   rf,rt=CL[(f,t)]
    B[rf]=B[rt];B[rt]=0
  C,EP,HM,S,H,ZH=oc,oep,ohm,os,oh,ozh
  BP[0],BP[1]=ob0,ob1
  w=not w
 def O(ms,tm,pl):
- z=[]
- for m in ms:
-  s=0
-  if m==tm:s=99999
-  else:
-   c=B[(m>>7)&127]
-   if c:s=1000+V[abs(c)]*16-V[abs(B[m&127])]
-   elif(m>>14)&7:s=900+V[(m>>14)&7]
-   elif m==KL[pl][0]:s=800
-   elif m==KL[pl][1]:s=700
-  z.append((-s,m))
- z.sort()
- return[m for _,m in z]
+ def k(m):
+  if m==tm:return-99999
+  c=B[(m>>7)&127]
+  if c:return-1000-V[abs(c)]*16+V[abs(B[m&127])]
+  if(m>>14)&7:return-900-V[(m>>14)&7]
+  if m==KL[pl][0]:return-800
+  if m==KL[pl][1]:return-700
+  return 0
+ return sorted(ms,key=lambda m:(k(m),m))
 class X(Exception):pass
 def F(d,a,b,pl):
  global w,EP,ZH
@@ -291,14 +269,13 @@ def mu(u):
 def setup(fen):
  global B,w,C,EP,HM,S,H,K,BP,ZH,U,RP
  B=[0]*128;U=[];RP={};S=0;H=0;BP=[0,0];ZH=0
- D={'P':1,'N':2,'B':3,'R':4,'Q':5,'K':6,'p':-1,'n':-2,'b':-3,'r':-4,'q':-5,'k':-6}
  z=fen.split()
  for r,row in enumerate(z[0].split('/')):
   s=(7-r)*16;f=0
   for ch in row:
    if ch.isdigit():f+=int(ch)
    else:
-    x=D[ch];B[s+f]=x
+    i='PNBRQKpnbrqk'.index(ch);x=i+1 if i<6 else 5-i;B[s+f]=x
     S+=W(x,s+f)
     if abs(x)!=1:H+=V[abs(x)]
     if abs(x)==3:BP[0 if x>0 else 1]+=1
@@ -323,14 +300,7 @@ def choose(g):
  try:m=RT()
  except Exception:m=None
  if m is not None and uc(m) in g['legal_moves']:return uc(m)
- bv=-1;bu=g['legal_moves'][0]
- for u in g['legal_moves']:
-  f=(ord(u[0])-97)+(int(u[1])-1)*16;t=(ord(u[2])-97)+(int(u[3])-1)*16
-  c=B[t];v=V[abs(c)] if c else 0
-  if len(u)==5:v+=V[{'q':5,'r':4,'b':3,'n':2}[u[4]]]-100
-  if abs(B[f])==1 and f&7!=t&7 and not c:v=100
-  if v>bv:bv=v;bu=u
- return bu
+ return max(g['legal_moves'],key=lambda u:V[abs(B[(ord(u[2])-97)+(int(u[3])-1)*16])]+(V[{'q':5,'r':4,'b':3,'n':2}[u[4]]]-100 if len(u)==5 else 0))
 if __name__=='__main__':
  while True:
   g=P('/game',{})
@@ -339,5 +309,3 @@ if __name__=='__main__':
    mv=choose(g)
    g=P('/move',{'game':g['game'],'move':mv})
    if not g:break
-  print(f"game {g.get('game')}: {g.get('outcome')} by {g.get('reason')}",file=sys.stderr)
- print(f"done: {g.get('wins')} won, {g.get('draws')} drawn, {g.get('losses')} lost",file=sys.stderr)
